@@ -33,6 +33,9 @@
 	static const std::string bms_corner = "\u2534";
 	static const std::string brs_corner = "\u2518";
 
+	//ARROWS
+	static const std::string u_arrow = "\u2BC5";
+	static const std::string l_arrow = "\u2BC8";
 
 /*
 
@@ -165,9 +168,6 @@
 		static const std::string ml_dh_corner = "198";
 		static const std::string bl_dh_corner = "212";
 	//SLIDERS
-		//arrows
-		static const std::string ld_arrow = "174";
-		static const std::string rd_arrow = "175";
 		//sliders
 		static const std::string h_slider = "233";
 		static const std::string v_slider_1 = "232";

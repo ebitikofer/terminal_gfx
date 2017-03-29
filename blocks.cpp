@@ -36,8 +36,8 @@ void blocks::bottom_cell(string str){
 	box_bottom(str.length() + 2);
 }
 
-void blocks::list_item(string str){
-	list_middle(str, str.length() + 2);
+void blocks::list_item(string str, bool sel){
+	list_middle(str, str.length() + 2, sel);
 	list_bottom(str.length() + 2);
 }
 
@@ -105,10 +105,16 @@ void blocks::cell_separator(int size){
 	cout << endl;
 }
 
-void blocks::list_middle(string str, int size){
+void blocks::list_middle(string str, int size, bool sel){
 	resize(size);
-	for(int i = 0; i < cols; i++)
-		cout << " ";
+	if(sel == true){
+		for(int i = 0; i < cols - 1; i++)
+			cout << " ";
+		cout << l_arrow;
+	}else{
+		for(int i = 0; i < cols; i++)
+			cout << " ";
+	}
 	cout << " " << str << " ";
 	for(int i = 0; i < cols; i++)
 		cout << " ";
